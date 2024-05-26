@@ -34,13 +34,13 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'silk',
+    
     'corsheaders',
     'django_filters',
     'rest_framework',
     'djoser',
     'playground',
-    'debug_toolbar',
+    
     'store',
     'tags',
     'likes',
@@ -177,12 +177,12 @@ SIMPLE_JWT = {
 }
 
 
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = '127.0.0.1'
-EMAIL_HOST_USER = ''
-EMAIL_HOST_PASSWORD = ''
-EMAIL_PORT = 2525
-DEFAULT_FROM_EMAIL = 'from@moshisgood.com'
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_HOST = '127.0.0.1'
+# EMAIL_HOST_USER = ''
+# EMAIL_HOST_PASSWORD = ''
+# EMAIL_PORT = 2525
+# DEFAULT_FROM_EMAIL = 'from@moshisgood.com'
 
 ADMINS = [
     ('Mosh', 'admin@moshbuy.com')
