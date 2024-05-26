@@ -7,7 +7,7 @@ DEBUG = False
 
 SECRET_KEY = os.environ['SECRET_KEY']
 
-ALLOWED_HOSTS = ['storefrontRestAPI.onrender.com']
+ALLOWED_HOSTS = ['storefrontrestapi.onrender.com']
 
 DATABASE_PASSWORD = os.environ.get('DATABASE_PASSWORD')
 
