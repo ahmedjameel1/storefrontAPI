@@ -1,0 +1,19 @@
+{
+    "python.testing.pytestArgs": [
+        "store"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true,
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "storefront3",
+            "database": "storefront3",
+            "username": "postgres",
+            "password": "postgres"
+        }
+    ]
+}
