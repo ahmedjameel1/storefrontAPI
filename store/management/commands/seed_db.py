@@ -13,5 +13,12 @@ class Command(BaseCommand):
         file_path = os.path.join(current_dir, 'seed.sql')
         sql = Path(file_path).read_text()
 
+        # Split SQL script into individual statements
+        statements = sql.split(';')
+
         with connection.cursor() as cursor:
-            cursor.execute(sql)
+            for statement in statements:
+                if statement.strip():  # Avoid executing empty statements
+                    cursor.execute(statement)
+        
+        self.stdout.write(self.style.SUCCESS('Database populated successfully'))
