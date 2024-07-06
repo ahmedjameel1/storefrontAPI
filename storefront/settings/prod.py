@@ -11,12 +11,19 @@ ALLOWED_HOSTS = ['storefrontrestapi.onrender.com']
 
 DATABASE_PASSWORD = os.environ.get('DATABASE_PASSWORD')
 
+#DATABASES = {
+#    'default': dj_database_url.config(
+ #       # Replace this value with your local database's connection string.
+ #       default='postgresql://devsearchuser:{DATABASE_PASSWORD}@dpg-co7eu3ev3ddc739568ig-a:5432/storefront',
+  #      conn_max_age=600
+   # )
+#}
+
 DATABASES = {
-    'default': dj_database_url.config(
-        # Replace this value with your local database's connection string.
-        default='postgresql://devsearchuser:{DATABASE_PASSWORD}@dpg-co7eu3ev3ddc739568ig-a:5432/storefront',
-        conn_max_age=600
-    )
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',  # Assuming db.sqlite3 is in your project directory
+    }
 }
 
 CELERY_BROKER_URL = os.environ.get('redis-cache-broker')
