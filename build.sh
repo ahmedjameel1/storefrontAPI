@@ -12,4 +12,4 @@ python manage.py collectstatic --no-input
 python manage.py migrate
 
 #add dummy data
-python manage.py seed_db
+# python manage.py seed_db
